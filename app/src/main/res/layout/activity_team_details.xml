@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamDetailsActivity">
+
+    <ImageView
+        android:id="@+id/team_logo"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ball_play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_country"
+        android:text="@string/country"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/team_logo"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/team_country_value"
+        android:text="@string/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/team_country"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/team_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:padding="10dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/team_logo"
+        app:layout_constraintTop_toBottomOf="@id/team_country_value" />
+
+    <TextView
+        android:id="@+id/founded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/founded"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/team_name_value"
+        app:layout_constraintStart_toEndOf="@id/team_logo"/>
+
+    <TextView
+        android:id="@+id/founded_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/founded"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/team_name_value"
+        app:layout_constraintStart_toEndOf="@id/founded" />
+
+    <TextView
+        android:id="@+id/web_site_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/web_site"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team_logo" />
+
+    <Button
+        android:id="@+id/web_site_value"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginStart="100dp"
+        android:background="@null"
+        android:gravity="center_vertical|start"
+        android:text="@string/web_site"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="@color/linksColor"
+        app:layout_constraintStart_toEndOf="@+id/team_logo"
+        app:layout_constraintTop_toBottomOf="@id/team_logo"
+        />
+
+    <TextView
+        android:id="@+id/email_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/web_site_name" />
+
+    <TextView
+        android:id="@+id/email_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/email"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/team_logo"
+        app:layout_constraintTop_toBottomOf="@id/web_site_value" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:id="@+id/selector"
+        app:layout_constraintTop_toBottomOf="@id/email_name"
+        android:padding="10dp"
+        android:background="@color/colorNoAvItem"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/player_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/selector">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

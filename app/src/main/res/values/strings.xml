@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FootballInfo</string>
+    <string name="token">e955179bb298492dbda0626a8c1f488a</string>
+    <string name="pay_or_die">Sorry, but for watching  this content you will  necessary buying the licence!!! Free, only information from competitions, which marked green color.</string>
+    <string name="qwerty">qwerty</string>
+    <string name="competitions_emblem">Competitions emblem</string>
+    <string name="country">Country: </string>
+    <string name="start_date">Start date:</string>
+    <string name="end_date">End date:</string>
+    <string name="free">FREE</string>
+    <string name="paid">PAID</string>
+
+
+    <string name="temp_cup">UEFA Champions League</string>
+    <string name="current_match_day">Current Match day:</string>
+    <string name="matches"> Watch all matches </string>
+    <string name="number">#</string>
+    <string name="team">Team</string>
+    <string name="pts">Pts</string>
+    <string name="gd">GD</string>
+    <string name="a">A</string>
+    <string name="f">F</string>
+    <string name="l">L</string>
+    <string name="d">D</string>
+    <string name="w">W</string>
+    <string name="pl">Pl</string>
+    <string name="status">Status:</string>
+    <string name="web_site">Web site:</string>
+    <string name="email">email:</string>
+    <string name="founded">Founded:</string>
+    <string name="position">Position</string>
+    <string name="role">| Role</string>
+    <string name="nationality">Nationality</string>
+    <string name="country_birth">Country birth</string>
+    <string name="date_birth">Date birth</string>
+    <string name="player">Player</string>
+    <string name="birth">(Birth)</string>
+    <string name="nationality_text">(nationality)</string>
+
+</resources>

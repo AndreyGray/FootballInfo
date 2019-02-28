@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_squad"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="4dp"
+    android:padding="5dp">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/founded">
+
+        <ImageView
+            android:id="@+id/ball"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ball"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/player_name_value"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/player_name_value"
+            android:text="@string/player"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ball"
+            app:layout_constraintEnd_toStartOf="@id/player_pos_value"/>
+
+        <TextView
+            android:id="@+id/player_pos_value"
+            android:text="@string/position"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/player_name_value"/>
+
+        <TextView
+            android:id="@+id/player_birth_value"
+            android:text="@string/date_birth"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/player_pos_value"
+            app:layout_constraintStart_toEndOf="@id/player_name_value"/>
+
+        <TextView
+            android:id="@+id/birth_text"
+            android:text="@string/birth"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/player_pos_value"
+            app:layout_constraintStart_toEndOf="@id/player_birth_value" />
+
+        <TextView
+            android:id="@+id/player_country_birth"
+            android:text="@string/country_birth"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/player_birth_value"
+            app:layout_constraintStart_toEndOf="@id/player_name_value"/>
+        <TextView
+            android:id="@+id/player_nationality_value"
+            android:text="@string/nationality"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/player_country_birth"
+            app:layout_constraintStart_toEndOf="@id/player_name_value"/>
+
+        <TextView
+            android:id="@+id/nationality_text"
+            android:text="@string/nationality_text"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/player_country_birth"
+            app:layout_constraintStart_toEndOf="@id/player_nationality_value"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompetitionActivity">
+
+    <ImageView
+        android:id="@+id/emblem_id"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/competitions_emblem" />
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/emblem_id"
+        app:layout_constraintEnd_toStartOf="@id/area_name"
+        app:layout_constraintBottom_toTopOf="@id/league_name"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="10dp"
+        android:text="@string/country"
+        android:textStyle="italic"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/area_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/league_name"
+        android:paddingTop="10dp"
+        android:text="@string/country"
+        android:textStyle="bold"
+        android:textSize="22sp"/>
+    <TextView
+        android:id="@+id/league_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/emblem_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/area_name"
+        app:layout_constraintBottom_toTopOf="@id/date_start"
+        android:padding="10dp"
+        android:text="@string/temp_cup"
+        android:textStyle="bold"
+        android:textSize="22sp"/>
+    <TextView
+        android:id="@+id/date_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/emblem_id"
+        app:layout_constraintEnd_toStartOf="@id/start_date"
+        app:layout_constraintTop_toBottomOf="@id/league_name"
+        app:layout_constraintBottom_toTopOf="@id/date_end"
+        android:text="@string/start_date"
+        android:textStyle="italic"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/date_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/league_name"
+        app:layout_constraintBottom_toTopOf="@id/end_date"
+        android:text="01.01.2019"
+        android:textStyle="bold"
+        android:textSize="19sp"/>
+    <TextView
+        android:id="@+id/date_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/emblem_id"
+        app:layout_constraintEnd_toStartOf="@id/end_date"
+        app:layout_constraintTop_toBottomOf="@id/date_start"
+        android:text="@string/end_date"
+        android:textStyle="italic"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/date_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_date"
+        android:text="01.07.2019"
+        android:textStyle="bold"
+        android:textSize="19sp"/>
+
+    <TextView
+        android:id="@+id/current_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/current_match_day"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/standings_header"
+        app:layout_constraintEnd_toStartOf="@id/current_match_day"
+        app:layout_constraintStart_toEndOf="@id/emblem_id"
+        app:layout_constraintTop_toBottomOf="@id/end_date" />
+    <TextView
+        android:id="@+id/current_match_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/current_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/end_date"
+        app:layout_constraintBottom_toTopOf="@+id/standings_header"
+        android:text="34"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/standings_header"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:background="@color/colorNoAvItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emblem_id">
+        <TextView
+            android:id="@+id/team_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/team_names"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/team"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/played_games"
+            app:layout_constraintStart_toEndOf="@id/team_numbers"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/played_games"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pl"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/games_won"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/games_won"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/w"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/games_draw"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/games_draw"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/d"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/games_lost"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/games_lost"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/l"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/goals_for"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/goals_for"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/f"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/goals_against"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/goals_against"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/a"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/goals_difference"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/goals_difference"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gd"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/points"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pts"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/standings_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/standings_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</android.support.constraint.ConstraintLayout>
