@@ -7,4 +7,5 @@ This project implemented in Android Studio 3.3.1 with Java and Android SDK. Test
 3. ROOM(SQLite);
 4. Java + AndroidSDK;
 5. Picasso;
-6. Gson;<br>7.CardView and RecyclerView.<br> 
+6. Gson;
+7. CardView and RecyclerView.<br> 
